@@ -2,9 +2,19 @@
   "name": "devomato.com",
   "version": "0.0.0",
   "description": "Blog for devomato.com using kerouac",
-  "author": "Andrew Jones",
+  "repository" : { 
+    "type" : "git"
+  , "url" : "http://github.com/ascjones/devomato.com.git"
+  },
+  "private" : true,
+  "author" : { 
+    "name" : "Andrew Jones", 
+    "email" : "ascjones@gmail.com",
+    "url" : "http://ascjones.com/"
+  }
   "dependencies": {
     "kerouac": "0.0.3",
+    "kerouac-blog": "0.0.1",
     "ejs-locals": "~1.0.2",
     "express": "~3.4.0"
   }
