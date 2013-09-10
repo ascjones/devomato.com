@@ -6,7 +6,7 @@ site.set('output', 'devomato.com');
 
 site.engine('ejs', require('ejs-locals'));
 
-site.plug(require('kerouac-blog')('blog'));
+site.plug(require('kerouac-blog')('posts'));
 
 site.content('content');
 site.static('public');
