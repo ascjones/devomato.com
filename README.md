@@ -1,4 +1,4 @@
 devomato.com
 =================
 
-Blog for devomato.com, using kerouac static site generator
+Blog for devomato.com, using [Kerouac](https://github.com/jaredhanson/kerouac) static site generator
