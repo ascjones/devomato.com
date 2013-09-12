@@ -14,7 +14,7 @@
   },
   "dependencies" : {
     "kerouac": "0.0.3",
-    "kerouac-blog": "git://github.com/jaredhanson/kerouac-blog.git#master",
+    "kerouac-blog": "git://github.com/ascjones/kerouac-blog#master",
     "ejs-locals": "~1.0.2",
     "express": "~3.4.0"
   }
