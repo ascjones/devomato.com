@@ -29,7 +29,7 @@ To start with we'll just poll this url once a second to get the latest price, an
 	
 ## Pushing events to the EventStore
 
-Guided by the EventStore [docs](https://github.com/EventStore/EventStore/wiki/Writing-to-a-Stream-(HTTP\)) and Rob Ashton's [post](http://codeofrob.com/entries/pushing-data-into-streams-in-the-eventstore.html) about writing to a stream over HTTP, I'm going to post the price data to an event stream in the EventStore. I'll package the price data up into an event of type `PriceChanged`, and post it to a stream called `EUR_USD`:
+Guided by the EventStore [docs](https://github.com/EventStore/EventStore/wiki/Writing-to-a-Stream-(HTTP)) and Rob Ashton's [post](http://codeofrob.com/entries/pushing-data-into-streams-in-the-eventstore.html) about writing to a stream over HTTP, I'm going to post the price data to an event stream in the EventStore. I'll package the price data up into an event of type `price-changed`, and post it to a stream called `EUR_USD`:
 
 ```
 var request = require('request');
@@ -65,9 +65,9 @@ setInterval(function() {
 
 We can now see price change events showing up on the EUR_USD stream by looking at the EventStore http UI at `/streams/EUR_USD`, or alternatively `/streams/EUR_USD?format=json` to fetch the stream of events in AtomPub format.
 
-![EUR_USD Stream in UI](./assets/images/EventStoreUI_EURUSD_Event_Stream.png) 
+![EUR_USD Stream in UI](/assets/images/EventStoreUI_EURUSD_Event_Stream.png) 
 
-And we can GET the data for an individual price change event from the stream by following the url provided in the stream feed: e.g. `/streams/EUR_USD/1?format=json` which gets us the json we originally persisted from the OANDA API:
+Then we can GET the data for an individual price change event from the stream by following the url provided in the stream feed: e.g. `/streams/EUR_USD/1?format=json` which gets us the json we originally persisted from the OANDA API:
 
 ```
 {
@@ -78,6 +78,5 @@ And we can GET the data for an individual price change event from the stream by 
 }
 ```
 
-I'll leave that running for a little bit to collect some price changes, after which I will start to play around with some EventStore projections and to see if I can tease anything interesting out of the data.
-
+I'll leave that running for a little bit to collect some price changes, after which I will start to play around with some EventStore projections and have some fun with the data.
 
