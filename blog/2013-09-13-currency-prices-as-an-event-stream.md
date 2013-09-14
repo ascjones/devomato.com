@@ -39,8 +39,6 @@ var instrument = process.argv[2] || "EUR_USD"
 var url = "http://api-sandbox.oanda.com/v1/quote?instruments=" + instrument;
 var lastBid, lastAsk;
 
-console.log('Polling prices for ' + instrument);
-
 setInterval(function() {
   request({url:url, json:true}, function (error, response, body) {
 
