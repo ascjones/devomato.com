@@ -1,5 +1,5 @@
 ---
-layout: 'post'
+layout: 'blog/post'
 title: 'Currency prices as an event stream'
 tags: [EventStore]
 ---

@@ -4,6 +4,6 @@
 
 <div>
 	<% posts.forEach(function(post) { %>
-		<a href='<%= post.prettyURL %>'><h4><%- post.title -%></h4></a>
+		<% include post-summary %>
 	<% }) %>
 </div>
