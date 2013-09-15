@@ -1,6 +1,9 @@
-body {
-  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
-  font-size:16px;
+p, body, li
+{ 
+    /* http://www.sitepoint.com/eight-definitive-font-stacks/  */
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-size: 16px;
+  line-height: 21px
 }
 
 .masthead {
