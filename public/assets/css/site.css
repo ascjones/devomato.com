@@ -1,3 +1,8 @@
+body {
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:16px;
+}
+
 .masthead {
   margin-bottom: 20px;
   padding-bottom: 5px;
