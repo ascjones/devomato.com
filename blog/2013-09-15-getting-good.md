@@ -34,8 +34,8 @@ At the end of the day the job of a developer is to build stuff that works and do
 - **A blog**: you're reading it, needs some work though.
 - **A mobile app**: good skill to have!
 - **A 'real-time' web app**: pushing data from the server to the client
-- **A sample app using Event Sourcing with the EventStore**: I dig the EventStore - want to play with it some more!
+- **A sample app using Event Sourcing with the EventStore**: I dig the EventStore - want to play with it some more.
 
 ## The Plan
 
-Next step is prioritise and prune this lot, then get more specific about each point about what I want to achieve. Then I can assign the amount of time I want to spend on each area and work out a schedule, fitting it around my beach time. It's a start!
+Next step is prioritise and prune this lot, then get more specific for each point about what I want to achieve. Then I can assign the amount of time I want to spend on each area and work out a schedule, fitting it around my beach time. It's a start!
