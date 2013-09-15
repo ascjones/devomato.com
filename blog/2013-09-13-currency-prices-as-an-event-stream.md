@@ -6,11 +6,11 @@ tags: [EventStore]
 
 # Currency prices as an event stream
 
-An excellent real world example of a stream of events is the frequently changing prices of financial instruments. So I'm going to use that data to play with [EventStore](http://geteventstore.com), see what interesting things I can do with it. 
+An excellent real world example of a stream of events is the frequently changing prices of financial instruments. So I'm going to use that data to play with <a href="http://geteventstore.com" target="_blank">EventStore</a>, see what interesting things I can do with it. 
 
 ## Getting the data
 
-Forex broker [OANDA](http://developer.oanda.com/) are building a nice [REST API](https://github.com/oanda/apidocs/) which we can use to grab some realtime price quotes. I'll use the EUR/USD currency pair for this example. A request to [http://api-sandbox.oanda.com/v1/quote?instruments=EUR_USD](http://api-sandbox.oanda.com/v1/quote?instruments=EUR_USD) gives us the following response:
+Forex broker <a href="http://developer.oanda.com/" target="_blank">OANDA</a> are building a nice <a href="https://github.com/oanda/apidocs/" target="_blank">REST API</a> which we can use to grab some realtime price quotes. I'll use the EUR/USD currency pair for this example. A request to <a href="http://api-sandbox.oanda.com/v1/quote?instruments=EUR_USD" target="_blank">api-sandbox.oanda.com/v1/quote?instruments=EUR_USD</a> gives us the following response:
 
 ```
 {
@@ -29,7 +29,7 @@ To start with we'll just poll this url once a second to get the latest price, an
 	
 ## Pushing events to the EventStore
 
-Guided by the EventStore [docs](https://github.com/EventStore/EventStore/wiki/Writing-to-a-Stream-(HTTP)) and Rob Ashton's [post](http://codeofrob.com/entries/pushing-data-into-streams-in-the-eventstore.html) about writing to a stream over HTTP, I'm going to post the price data to an event stream in the EventStore. I'll package the price data up into an event of type `price-changed`, and post it to a stream called `EUR_USD`:
+Guided by the EventStore <a href="https://github.com/EventStore/EventStore/wiki/Writing-to-a-Stream-(HTTP)" target="_blank">docs</a> and Rob Ashton's <a href="http://codeofrob.com/entries/pushing-data-into-streams-in-the-eventstore.html" target="_blank">post</a> about writing to a stream over HTTP, I'm going to post the price data to an event stream in the EventStore. I'll package the price data up into an event of type `price-changed`, and post it to a stream called `EUR_USD`:
 
 ```
 var request = require('request');
