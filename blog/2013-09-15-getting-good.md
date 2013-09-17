@@ -1,10 +1,7 @@
 ---
-layout: 'blog/post'
 title: 'Getting good'
 tags: []
 ---
-
-# Getting good
 
 I recently reread <a href="http://calnewport.com/blog/" target="_blank">Cal Newport's</a> excellent career advice book: <a href="http://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you" target="_blank">So Good They Can't Ignore You: Why Skills Trump Passion in the Quest for Work You Love</a>. The central thesis is that in order to build a remarkable and fulfilling career you must focus on building 'rare and valuable' skills, rather than the popular advice to simply 'follow your passion'.
 
