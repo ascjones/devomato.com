@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/assets/css/site.css">
   </head>
   <body>
+    
     <div class="container">
       <div class="masthead">
         <h3>devomato</h3>
@@ -17,5 +18,9 @@
         </div>
       </section>
     </div>
+
+    {{#unless production}}
+    <script src="http://localhost:35729/livereload.js"></script>
+    {{/unless}}
   </body>
 </html>

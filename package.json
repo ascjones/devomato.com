@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "assemble": "~0.4.7",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

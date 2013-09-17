@@ -2,11 +2,13 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
+
       assemble: {
         options: {
           assets: 'public/assets',
           partials: 'partials/*.hbs',
-          layoutdir: 'layouts'
+          layoutdir: 'layouts',
+          production: process.env.NODE_ENV === 'production'
         },
         blog: {
           options : {
@@ -18,9 +20,18 @@ module.exports = function(grunt) {
             {expand: true, cwd: 'blog', src: ['*.md'], dest: './out/blog', ext: '/index'}
           ]
         }
-      }
+      },
+
+      watch: {
+        files: ['blog/*.md'],
+        tasks: ['assemble'],
+        options: {
+          livereload: true,
+        }
+      },
   });
 
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['assemble']);
 }
