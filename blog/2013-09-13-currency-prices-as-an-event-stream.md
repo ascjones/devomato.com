@@ -1,10 +1,7 @@
 ---
-layout: 'blog/post'
 title: 'Currency prices as an event stream'
 tags: [EventStore]
 ---
-
-# Currency prices as an event stream
 
 An excellent real world example of a stream of events is the frequently changing prices of financial instruments. So I'm going to use that data to play with <a href="http://geteventstore.com" target="_blank">EventStore</a>, see what interesting things I can do with it. 
 
