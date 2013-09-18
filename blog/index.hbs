@@ -1,0 +1,16 @@
+---
+index: true
+---
+
+<ul>
+  {{#each pages}}
+  	{{#unless data.index}}
+    	<li>
+    		<a href="#">{{data.title}}</a>
+	    		{{#excerpt}}
+	    			{{ page }}
+	    		{{/excerpt}}
+    	</li>
+    {{/unless}}
+  {{/each}}
+</ul>

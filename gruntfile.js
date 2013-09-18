@@ -6,18 +6,20 @@ module.exports = function(grunt) {
       assemble: {
         options: {
           assets: 'out/assets',
+          helpers: 'helpers/helper-*.js',
           partials: 'partials/*.hbs',
           layoutdir: 'layouts',
           production: process.env.NODE_ENV === 'production'
         },
-        blog: {
+        posts: {
           options : {
             engine: 'handlebars',
             layout: 'post.hbs',
             ext: '.html' // hack from https://github.com/assemble/assemble/issues/265 for pretty urls - added after file ext below
           },
           files: [
-            {expand: true, cwd: 'blog', src: ['*.md'], dest: './out/blog', ext: '/index'}
+            {expand: true, cwd: 'blog/posts', src: ['*.md'], dest: './out/blog', ext: '/index'},
+            {'out/blog/index.html': ['blog/index.hbs' ]}
           ]
         }
       },
