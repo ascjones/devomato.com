@@ -1,5 +1,6 @@
 ---
 title: 'Currency prices as an event stream'
+date: 2013-09-13
 tags: [EventStore]
 ---
 
@@ -60,7 +61,7 @@ setInterval(function() {
 
 We can now see price change events showing up on the EUR_USD stream by looking at the EventStore http UI at `/streams/EUR_USD`, or alternatively `/streams/EUR_USD?format=json` to fetch the stream of events in AtomPub format.
 
-![EUR_USD Stream in UI](/assets/images/EventStoreUI_EURUSD_Event_Stream.png) 
+![EUR_USD Stream in UI]({{assets}}/images/EventStoreUI_EURUSD_Event_Stream.png) 
 
 Then we can GET the data for an individual price change event from the stream by following the url provided in the stream feed: e.g. `/streams/EUR_USD/1?format=json` which gets us the json we originally persisted from the OANDA API:
 

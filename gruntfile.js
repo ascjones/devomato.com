@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
       assemble: {
         options: {
-          assets: 'public/assets',
+          assets: 'out/assets',
           partials: 'partials/*.hbs',
           layoutdir: 'layouts',
           production: process.env.NODE_ENV === 'production'
@@ -22,6 +22,16 @@ module.exports = function(grunt) {
         }
       },
 
+      clean: ["out"],
+
+      copy: {
+        main: {
+          files: [
+            {expand: true, src: ['assets/**'], dest: 'out/'},
+          ]
+        }
+      },
+
       watch: {
         files: ['blog/*.md'],
         tasks: ['assemble'],
@@ -33,5 +43,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['assemble']);
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.registerTask('default', ['clean', 'copy', 'assemble']);
 }
