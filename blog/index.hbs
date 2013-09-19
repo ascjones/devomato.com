@@ -2,15 +2,11 @@
 index: true
 ---
 
-<ul>
-  {{#each pages}}
-  	{{#unless data.index}}
-    	<li>
-    		<a href="#">{{data.title}}</a>
-	    		{{#excerpt}}
-	    			{{ page }}
-	    		{{/excerpt}}
-    	</li>
-    {{/unless}}
-  {{/each}}
-</ul>
+<div>
+{{#each pages}}
+  {{#unless data.index}}
+    <h1><a href="#">{{data.title}}</a></h1>
+    {{#markdown}}{{#excerpt}}{{{ page }}}{{/excerpt}}{{/markdown}}
+  {{/unless}}
+{{/each}}
+</div>
