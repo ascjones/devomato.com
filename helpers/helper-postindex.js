@@ -18,7 +18,8 @@
             if (date1 === date2) {
               return 0;
             }
-            return date1 < date2 ? -1 : 1;
+            // sort dates in descending order: most recent first
+            return date1 > date2 ? -1 : 1;
           })
           .slice(0, count);
 
