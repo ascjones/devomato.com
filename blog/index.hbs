@@ -1,14 +1,11 @@
----
-index: true
----
-
 {{!-- {{inspect this 'json'}} --}}
 
 <div>
 {{#each pages}}
-  {{#unless data.index}}
-    <h1><a href="{{relative ../dirname dirname}}">{{data.title}}</a></h1>
+  {{ debug ../page.src }}
+  {{#unless_eq src compare=../page.src}}
+    <h1><a href="{{relative ../../page.dest dirname}}">{{data.title}}</a></h1>
     {{#markdown}}{{#excerpt}}{{{ page }}}{{/excerpt}}{{/markdown}}
-  {{/unless}}
+  {{/unless_eq}}
 {{/each}}
 </div>
