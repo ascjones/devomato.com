@@ -1,14 +1,16 @@
-{{!-- {{inspect this 'json'}} --}}
+---
+layout: default.hbs
+---
 
 <div>
 {{#postindex pages 4}}
 	{{#if isFirst}}
-		<h1><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
+		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- show the whole post for the most recent post --}}
 		{{#markdown}}{{{ post.page }}}{{/markdown}}
 	{{/if}}
 	{{#unless isFirst}}
-		<h1><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
+		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- only show excerpts for the other posts --}}
 		{{#markdown}}{{#excerpt}}{{{ post.page }}}{{/excerpt}}{{/markdown}}
 	{{/unless}}

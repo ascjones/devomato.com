@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           },
           files: [
             {expand: true, cwd: 'blog/posts', src: ['*.md'], dest: './out/blog', ext: '/index'},
-            {'out/blog/index.html': ['blog/index.hbs' ]}
+            {'out/blog/index.html': ['blog/index.hbs']}
           ]
         }
       },
