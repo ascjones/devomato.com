@@ -18,5 +18,17 @@
   ],
   "dependencies": {
     "bootstrap-theme-devomato": "../bootstrap-theme-devomato/"
+  },
+  "exportsOverride": {
+    "bootstrap-theme-devomato": {
+      "css": "dist/css/*.css"
+    },
+    "bootstrap": {
+      "css": "dist/css/*.css",
+      "js": "dist/js/*.js"
+    },
+    "jquery": {
+      "js": "*.js"
+    }
   }
 }

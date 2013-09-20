@@ -29,14 +29,17 @@ module.exports = function(grunt) {
       copy: {
         main: {
           files: [
-            {expand: true, src: ['assets/**'], dest: 'out/'},
-            {
-              expand: true, 
-              flatten: true,
-              src: ['bower_components/bootstrap-theme-devomato/dist/css/*.css'], 
-              dest: 'out/assets/css'
-            }
+            {expand: true, src: ['assets/**'], dest: 'out/'}
           ]
+        }
+      },
+
+      bower: {
+        install: {
+          options: {
+            // cleanup: true,
+            targetDir: './out/assets',
+          }
         }
       },
 
@@ -53,5 +56,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.registerTask('default', ['clean', 'copy', 'assemble']);
+  grunt.loadNpmTasks('grunt-bower-task');
+  grunt.registerTask('default', ['clean', 'bower', 'copy', 'assemble']);
 }
