@@ -1,0 +1,22 @@
+{
+  "name": "devomato.com",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ascjones/devomato.com",
+  "authors": [
+    "Andrew Jones <ascjones@gmail.com>"
+  ],
+  "description": "devomato.com",
+  "main": "out/blog/index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-theme-devomato": "../bootstrap-theme-devomato/"
+  }
+}

@@ -30,6 +30,12 @@ module.exports = function(grunt) {
         main: {
           files: [
             {expand: true, src: ['assets/**'], dest: 'out/'},
+            {
+              expand: true, 
+              flatten: true,
+              src: ['bower_components/bootstrap-theme-devomato/dist/css/*.css'], 
+              dest: 'out/assets/css'
+            }
           ]
         }
       },
