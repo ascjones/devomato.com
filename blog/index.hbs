@@ -2,7 +2,7 @@
 layout: default.hbs
 ---
 
-<div>
+<div class="content">
 {{#postindex pages 4}}
 	{{#if isFirst}}
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
@@ -13,6 +13,7 @@ layout: default.hbs
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- only show excerpts for the other posts --}}
 		{{#markdown}}{{#excerpt}}{{{ post.page }}}{{/excerpt}}{{/markdown}}
+		<a href="{{relative ../../page.dest post.dirname}}" class="btn btn-sm btn-primary">There's More</a>
 	{{/unless}}
 {{/postindex}}
 </div>

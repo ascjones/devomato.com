@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Devomato</title>
-    <link rel="stylesheet" href="{{assets}}/css/bootstrap-theme-devomato/bootstrap.min.css">
-    {{!-- <link rel="stylesheet" href="{{assets}}/css/site.css"> --}}
-  </head>
-  <body>
+<head>
+  <title>Devomato</title>
+  <link rel="stylesheet" href="{{assets}}/css/bootstrap-theme-devomato/bootstrap.min.css">
+  {{!-- <link rel="stylesheet" href="{{assets}}/css/site.css"> --}}
+</head>
+<body>
 
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">devomato</a>
-        </div>
-      </div>
-    </div>
-
+  <div class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-        {{> body }}
-        </div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">devomato</a>
       </div>
-      <section id="footer">
-        <div class="footer">
-          <p>&copy; 2013 Andrew Jones<br/></p>
-        </div>
-      </section>
     </div>
+  </div>
 
-    {{#unless production}}
-    <script src="http://localhost:35729/livereload.js"></script>
-    {{/unless}}
-  </body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        {{> body }}
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2013 Andrew Jones<br/></p>
+    </div>
+  </footer>
+
+  {{#unless production}}
+  <script src="http://localhost:35729/livereload.js"></script>
+  {{/unless}}
+</body>
 </html>
