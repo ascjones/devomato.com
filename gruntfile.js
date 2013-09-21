@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
 
       watch: {
-        files: ['blog/*.md'],
+        files: ['blog/*.md', 'layouts/*.hbs'],
         tasks: ['assemble'],
         options: {
           livereload: true,
