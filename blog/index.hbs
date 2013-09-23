@@ -8,12 +8,13 @@ layout: default.hbs
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- show the whole post for the most recent post --}}
 		{{#markdown}}{{{ post.page }}}{{/markdown}}
+		{{> postfooter.hbs }}
 	{{/if}}
 	{{#unless isFirst}}
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- only show excerpts for the other posts --}}
 		{{#markdown}}{{#excerpt}}{{{ post.page }}}{{/excerpt}}{{/markdown}}
-		<a href="{{relative ../../page.dest post.dirname}}" class="btn btn-sm btn-primary">There's More</a>
+		<a href="{{relative ../../page.dest post.dirname}}" class="btn btn-sm btn-default">There's More</a>
 	{{/unless}}
 {{/postindex}}
 </div>
