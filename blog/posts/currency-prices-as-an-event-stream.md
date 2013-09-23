@@ -4,7 +4,7 @@ date: 2013-09-13
 tags: [EventStore]
 ---
 
-An excellent real world example of a stream of events is the frequently changing prices of financial instruments. So I'm going to use that data to play with <a href="http://geteventstore.com" target="_blank">EventStore</a>, see what interesting things I can do with it. <!-- excerpt -->
+An excellent real world example of a stream of events is the frequently changing prices of financial instruments. So I'm going to use that data to play with <a href="http://geteventstore.com" target="_blank">EventStore</a>, see what interesting things I can do with it.
 
 ## Getting the data
 
@@ -23,7 +23,7 @@ Forex broker <a href="http://developer.oanda.com/" target="_blank">OANDA</a> are
 }
 ```
 
-To start with we'll just poll this url once a second to get the latest price, and push an event to the EventStore if the price has changed.
+To start with we'll just poll this url once a second to get the latest price, and push an event to the EventStore if the price has changed.<!-- excerpt -->
 	
 ## Pushing events to the EventStore
 

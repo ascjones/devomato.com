@@ -21,7 +21,7 @@
     Handlebars.registerHelper("excerpt", function (options) {
       var content = options.fn(this);
       var trimmed = content.trim();
-      var excerptMarker = Handlebars.Utils.escapeExpression("<!-- excerpt -->");
+      var excerptMarker = "<!-- excerpt -->";
       var indexOfExcerpt = trimmed.indexOf(excerptMarker); 
       // use the first paragraph as the excerpt if the marker is not there
       indexOfExcerpt = indexOfExcerpt === -1 ? trimmed.indexOf("\n") : indexOfExcerpt;
