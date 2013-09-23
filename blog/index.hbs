@@ -8,7 +8,7 @@ layout: default.hbs
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- show the whole post for the most recent post --}}
 		{{#markdown}}{{{ post.page }}}{{/markdown}}
-		{{> postfooter.hbs }}
+		{{> postfooter.hbs post }}
 	{{/if}}
 	{{#unless isFirst}}
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
