@@ -14,7 +14,8 @@ layout: default.hbs
 		<h1 class="page-header"><a href="{{relative ../../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 		{{!-- only show excerpts for the other posts --}}
 		{{#markdown}}{{#excerpt}}{{{ post.page }}}{{/excerpt}}{{/markdown}}
-		<a href="{{relative ../../page.dest post.dirname}}" class="btn btn-sm btn-default">There's More</a>
+		<p><a href="{{relative ../../page.dest post.dirname}}">Read the rest...</a></p>
+		{{> postfooter.hbs post }}
 	{{/unless}}
 {{/postindex}}
 </div>
