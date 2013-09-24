@@ -16,7 +16,7 @@ Good developers are not restricted to a single language/framework, and becoming 
 - __Javascript__ (my level: _intermediate_): build a 'real time' web app with full stack javascript (node.js on server)
 - __Python__ (my level: _beginner_): written a few small scripts with it already, but learn the language properly: build a web app.
 - __Go__ (my level: _complete beginner_): cool systems langauge from Google: learn the fundamentals, build something interesting (and fast!)
-- __C#__ (my level: _advanced_): this has been my primary professional language for my 10 year career. Still lots to learn though! Create or contribute to an OSS project.
+- __C#__ (my level: _advanced_): this has been my primary professional language for my 10 year career. Still lots to learn though! Create or contribute to an OSS project. <!-- excerpt -->
 
 ### How stuff works
 
