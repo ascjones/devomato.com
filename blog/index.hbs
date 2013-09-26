@@ -3,7 +3,7 @@ layout: default.hbs
 ---
 
 <div class="content">
-{{#postindex pages 4}}
+{{#postindex posts 4}}
 	<h1 class="page-header"><a href="{{relative ../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 	{{#if isFirst}}
 		{{!-- show the whole post for the most recent post --}}

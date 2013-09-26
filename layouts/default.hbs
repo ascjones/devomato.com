@@ -29,13 +29,12 @@
           </div>
           <div class="panel-body">
             {{#each posts}}
-                {{#withFirst pages 5}}
-                  <p>            
-                    <a href="{{relative ../../page.dest dirname}}">{{data.title}}</a>
-                    <small class="text-muted"> - {{timeago data.date}}</small>
-                  </p>
-                {{/withFirst}}
-                </ul>
+              {{#withFirst pages 5}}
+                <p>            
+                  <a href="{{relative ../../page.dest dirname}}">{{data.title}}</a>
+                  <small class="text-muted"> - {{timeago data.date}}</small>
+                </p>
+              {{/withFirst}}
             {{/each}}            
           </div>
         </div>
