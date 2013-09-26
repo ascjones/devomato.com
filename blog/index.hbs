@@ -7,9 +7,9 @@ layout: default.hbs
 		{{#forEach pages}}
 			<h1 class="page-header"><a href="{{relative ../../page.dest dirname}}">{{data.title}}</a></h1>
 			{{#if isFirst}}
-				{{#markdown}}{{{ page }}}{{/markdown}}
+				{{#markdown}}{{#striphbsescape}}{{{ page }}}{{/striphbsescape}}{{/markdown}}
 			{{else}}
-				{{#markdown}}{{#excerpt}}{{{ page }}}{{/excerpt}}{{/markdown}}
+				{{#markdown}}{{#striphbsescape}}{{#excerpt}}{{{ page }}}{{/excerpt}}{{/striphbsescape}}{{/markdown}}
 				<p><a href="{{relative ../../../page.dest post.dirname}}">Read the rest...</a></p>
 			{{/if}}
 			{{> postfooter.hbs data }}
