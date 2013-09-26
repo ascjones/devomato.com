@@ -1,8 +1,7 @@
 ---
 title: 'Getting good'
 date: 2013-09-15
-categories:
-- post
+posts: true
 tags: []
 ---
 

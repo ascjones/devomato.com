@@ -28,17 +28,15 @@
             Recent Posts
           </div>
           <div class="panel-body">
-            {{#each categories}}
-              {{#is category "post"}}
+            {{#each posts}}
                 {{#withFirst pages 5}}
                   <p>            
-                    <a href="{{relative ../../../page.dest dirname}}">{{data.title}}</a>
+                    <a href="{{relative ../../page.dest dirname}}">{{data.title}}</a>
                     <small class="text-muted"> - {{timeago data.date}}</small>
                   </p>
                 {{/withFirst}}
                 </ul>
-              {{/is}}
-            {{/each}}
+            {{/each}}            
           </div>
         </div>
       </div>
