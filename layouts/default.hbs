@@ -30,9 +30,11 @@
           <div class="panel-body">
             {{#each categories}}
               {{#is category "post"}}
+                {{#withFirst pages 2}}
                 {{#ul pages class="nav nav-pills nav-stacked"}}
                   <a href="{{relative ../../../page.dest dirname}}">{{data.title}}</a>
                 {{/ul}}
+                {{/withFirst}}
               {{/is}}
             {{/each}}
           </div>
