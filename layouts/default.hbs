@@ -28,9 +28,13 @@
             Recent Posts
           </div>
           <div class="panel-body">
-            {{#ul pages}}
-              {{ data.title }}
-            {{/ul}}
+            {{#each categories}}
+              {{#is category "post"}}
+                {{#ul pages class="nav nav-pills nav-stacked"}}
+                  <a href="{{relative ../../../page.dest dirname}}">{{data.title}}</a>
+                {{/ul}}
+              {{/is}}
+            {{/each}}
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 ---
 title: 'Currency prices as an event stream'
 date: 2013-09-13
+categories:
+- post
 tags: [EventStore]
 ---
 

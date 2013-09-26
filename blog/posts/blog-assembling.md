@@ -1,6 +1,8 @@
 ---
 title: 'Blog assembling'
 date: 2013-09-24
+categories:
+- post
 tags: ['meta', 'javascript', 'assemble']
 ---
 
