@@ -20,6 +20,21 @@
       <div class="col-lg-9">
         {{> body }}
       </div>
+
+      <!-- recent posts panel -->
+      <div class="col-lg-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Recent Posts
+          </div>
+          <div class="panel-body">
+            {{#ul pages}}
+              {{ data.title }}
+            {{/ul}}
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
