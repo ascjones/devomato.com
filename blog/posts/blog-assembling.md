@@ -1,5 +1,5 @@
 ---
-title: 'Assembling this blog'
+title: 'Blog assembling'
 date: 2013-09-24
 tags: ['meta', 'javascript', 'assemble']
 ---
@@ -23,13 +23,13 @@ To generate html files from the markdown posts, I added an assemble task to my G
 ```javascript
 assemble: {
 	options: {
-	  assets: 'out/assets',		// path of assets e.g. css files available as variable to templates
-	  layoutdir: 'layouts', 	// resolve layouts from this directory
+	  assets: 'out/assets',    // path of assets e.g. css files available as variable to templates
+	  layoutdir: 'layouts',    // resolve layouts from this directory
 	},
 	blog: {
 	  options : {
-	    engine: 'handlebars',	// use handlebars engine to render the pages
-	    layout: 'post.hbs'		// the layout to use to generate each page
+	    engine: 'handlebars',  // use handlebars engine to render the pages
+	    layout: 'post.hbs'     // the layout to use to generate each page
 	  },
 	  files: [
 	  	// transform all markdown files into html files
