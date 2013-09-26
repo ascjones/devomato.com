@@ -7,10 +7,10 @@ layout: default.hbs
 	<h1 class="page-header"><a href="{{relative ../page.dest post.dirname}}">{{post.data.title}}</a></h1>
 	{{#if isFirst}}
 		{{!-- show the whole post for the most recent post --}}
-		{{#markdown}}{{{ post.page }}}{{/markdown}}
+		{{#markdown}}{{{ postmd }}}{{/markdown}}
 	{{else}}
 		{{!-- only show excerpts for the other posts --}}
-		{{#markdown}}{{#excerpt}}{{{ post.page }}}{{/excerpt}}{{/markdown}}
+		{{#markdown}}{{#excerpt}}{{{ postmd }}}{{/excerpt}}{{/markdown}}
 		<p><a href="{{relative ../../page.dest post.dirname}}">Read the rest...</a></p>
 	{{/if}}
 	{{> postfooter.hbs post }}

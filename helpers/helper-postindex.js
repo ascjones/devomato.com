@@ -29,7 +29,9 @@
       var index;
       for (index = i = 0, len = posts.length; i < len; index = ++i) {
         var post = posts[index];
+        var tmpl = Handlebars.compile(post.page);
         result += options.fn({
+          postmd: tmpl(this),
           post: post,
           isFirst: index === 0
         });
