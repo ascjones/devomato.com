@@ -15,7 +15,12 @@ module.exports = function(grunt) {
           options : {
             engine: 'handlebars',
             layout: 'post.hbs',
-            ext: '.html' // hack from https://github.com/assemble/assemble/issues/265 for pretty urls - added after file ext below
+            ext: '.html', // hack from https://github.com/assemble/assemble/issues/265 for pretty urls - added after file ext below
+            collections: [{
+              name: 'categories',
+              sortorder: 'desc',
+              sortby: 'date'
+            }]
           },
           files: [
             {expand: true, cwd: 'blog/posts', src: ['*.md'], dest: './out/blog', ext: '/index'},
