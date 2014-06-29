@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-theme-devomato": "../bootstrap-theme-devomato/"
+    "bootstrap-theme-devomato": "./bootstrap-theme-devomato/"
   },
   "exportsOverride": {
     "bootstrap-theme-devomato": {
