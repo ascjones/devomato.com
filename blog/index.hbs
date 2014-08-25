@@ -12,7 +12,7 @@ layout: default.hbs
 				{{#markdown}}{{#striphbsescape}}{{#excerpt}}{{{ page }}}{{/excerpt}}{{/striphbsescape}}{{/markdown}}
 				<p><a href="{{relative ../../../page.dest post.dirname}}">Read the rest...</a></p>
 			{{/if}}
-			{{> postfooter.hbs data }}
+			{{> postfooter data }}
 		{{/forEach}}
 	{{/each}}
 </div>
